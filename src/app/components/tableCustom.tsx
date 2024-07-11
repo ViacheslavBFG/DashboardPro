@@ -77,10 +77,10 @@ const TableCustom = () => {
     setCurrent(page);
   };
   return (
-    <div className="overflow-x-auto rounded-3xl bg-white p-8  shadow-2xl h-fit mb-10">
+    <div className="overflow-x-auto rounded-3xl bg-white p-8  shadow-2xl h-fit mb-10 text-xs md:text-sm">
       <div className="flex items-center justify-between mb-10">
         <div>
-          <p className=" text-2xl font-bold">All Customers</p>
+          <p className=" md:text-2xl font-bold">All Customers</p>
           <p className=" text-green-500">Active Members</p>
         </div>
         <div className="flex gap-1">
@@ -92,25 +92,25 @@ const TableCustom = () => {
           />
         </div>
       </div>
-      <table className="min-w-full  border-collapse">
-        <thead>
+      <table className="min-w-full  border-collapse  ">
+        <thead className="text-xs md:text-sm">
           <tr>
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-sm leading-4 text-gray-400 tracking-wider">
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs md:text-sm leading-4 text-gray-400 tracking-wider">
               Customer Name
             </th>
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-sm leading-4 text-gray-400 tracking-wider">
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs md:text-sm leading-4 text-gray-400 tracking-wider">
               Company
             </th>
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-sm leading-4 text-gray-400 tracking-wider">
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs md:text-sm leading-4 text-gray-400 tracking-wider">
               Phone Number
             </th>
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-sm leading-4 text-gray-400 tracking-wider">
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs md:text-sm leading-4 text-gray-400 tracking-wider">
               Email
             </th>
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-sm leading-4 text-gray-400 tracking-wider">
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs md:text-sm leading-4 text-gray-400 tracking-wider">
               Country
             </th>
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-sm leading-4 text-gray-400 tracking-wider">
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs md:text-sm leading-4 text-gray-400 tracking-wider">
               Status
             </th>
           </tr>
@@ -118,22 +118,22 @@ const TableCustom = () => {
         <tbody>
           {data.map((person, index) => (
             <tr key={index}>
-              <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-300 text-sm leading-5">
+              <td className=" px-1 md:px-6 py-1 md:py-4 whitespace-no-wrap border-b border-gray-300 text-xs md:text-sm leading-5">
                 {person.name}
               </td>
-              <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-300 text-sm leading-5">
+              <td className="px-1 md:px-6 py-1 md:py-4 whitespace-no-wrap border-b border-gray-300 text-xs md:text-sm leading-5">
                 {person.company}
               </td>
-              <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-300 text-sm leading-5">
+              <td className="px-1 md:px-6 py-1 md:py-4 whitespace-no-wrap border-b border-gray-300 text-xs md:text-sm leading-5">
                 {person.phone}
               </td>
-              <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-300 text-sm leading-5">
+              <td className="px-1 md:px-6 py-1 md:py-4 whitespace-no-wrap border-b border-gray-300 text-xs md:text-sm leading-5">
                 {person.email}
               </td>
-              <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-300 text-sm leading-5">
+              <td className="px-1 md:px-6 py-1 md:py-4 whitespace-no-wrap border-b border-gray-300 text-xs md:text-sm leading-5">
                 {person.country}
               </td>
-              <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-300 text-sm leading-5">
+              <td className="px-1 md:px-6 py-1 md:py-4 whitespace-no-wrap border-b border-gray-300 text-xs md:text-sm leading-5">
                 <span
                   className={`relative inline-block px-3 py-1 font-semibold leading-tight ${
                     person.status === "Active"
@@ -155,7 +155,7 @@ const TableCustom = () => {
         </tbody>
       </table>
       <div className="flex items-end justify-between">
-        <p className=" text-gray-400 text-sm">
+        <p className=" text-gray-400 text-xs md:text-sm">
           Showing data 1 to 8 of 256K entries
         </p>
         <Pagination

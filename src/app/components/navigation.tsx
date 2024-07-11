@@ -17,7 +17,7 @@ const Navigation = () => {
   };
 
   return (
-    <div className="p-10">
+    <div className=" p-5  md:p-10">
       <Button type="primary" onClick={showDrawer} className="md:hidden">
         <MenuUnfoldOutlined />
       </Button>

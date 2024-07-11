@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button, Drawer, DrawerProps } from "antd";
 import { MenuUnfoldOutlined, RightOutlined } from "@ant-design/icons";
 import React from "react";
+import UserData from "./userData";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
@@ -30,6 +31,13 @@ const Navigation = () => {
         open={open}
         key={placement}
       >
+        <div className="flex gap-3 mb-10">
+          <img className="w-10 h-10" src="/img/userAva.png" alt="Avatar" />
+          <div>
+            <p className=" font-bold">Evano</p>
+            <p className=" text-gray-400">Project Manager</p>
+          </div>
+        </div>
         <ul className="flex flex-col gap-5 text-gray-400">
           {[
             { img: "img/key1.png", label: "Dashboard" },
